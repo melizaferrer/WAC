@@ -46,7 +46,7 @@ const hotels =
     // },
   ];
   
-  const Hotel = () => {
+  const Accommodation = () => {
     return (
       <Grid container spacing={3}>
         {hotels.map((product, index) => (
@@ -102,5 +102,5 @@ const hotels =
   };
    
   
-  export default Hotel;
+  export default Accommodation;
 

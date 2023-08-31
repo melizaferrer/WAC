@@ -1,105 +1,44 @@
 "use client"
 
 import React from 'react';
-import img1 from "public/images/products/H1.jpg";
-import img2 from "public/images/products/H2.jpg";
-import img3 from "public/images/products/H3.jpg";
-import { Box, Grid, CardContent, Rating, Stack, Typography, Tooltip, Fab, Link } from '@mui/material';
-import PageContainer from '../components/container/PageContainer';
-import BlankCard from '../components/shared/BlankCard';
-import { IconBasket } from '@tabler/icons-react';
-import Image from "next/image";
 
-const hotels = 
-  [
-    {
-      title: "Blue Sand Hotel",
-      subheader: "September 14, 2023",
-      photo: img1,
-      salesPrice: 375,
-      price: 285,
-      rating: 4,
-    },
-    {
-      title: "Green Garden Hotel",
-      subheader: "September 14, 2023",
-      photo: img2,
-      salesPrice: 650,
-      price: 900,
-      rating: 5,
-    },
-    {
-      title: "Paradise Hotel",
-      subheader: "September 14, 2023",
-      photo: img3,
-      salesPrice: 150,
-      price: 200,
-      rating: 3,
-    },
-    // {
-    //   title: "Cute Soft Teddybear",
-    //   subheader: "September 14, 2023",
-    //   photo: ,
-    //   salesPrice: 285,
-    //   price: 345,
-    //   rating: 2,
-    // },
-  ];
+import { Box, Grid, CardContent, Rating, Stack, Typography, Tooltip, Fab, Link } from '@mui/material';
+import Excursion from './excursions/page';
+import Accommodation from './accommodation/page';
+import BoxOffice from './boxOffice/page';
+import Car from './carRent/page';
+import Traslados from './transfers/page';
+
   
   const Product = () => {
     return (
-      <Grid container spacing={3}>
-        {hotels.map((product, index) => (
-          <Grid item xs={12} md={4} lg={3} key={index}>
-            <BlankCard>
-              <Typography component={Link} href="/">
-                <Image
-                  src={product.photo}
-                  alt="img"
-                  style={{ width: "100%", height: "250px" }}
-                />
-              </Typography>
-              <Tooltip title="Add To Cart">
-                <Fab
-                  size="small"
-                  color="primary"
-                  sx={{ bottom: "75px", right: "15px", position: "absolute" }}
-                >
-                  <IconBasket size="16" />
-                </Fab>
-              </Tooltip>
-              <CardContent sx={{ p: 3, pt: 2 }}>
-                <Typography variant="h6">{product.title}</Typography>
-                <Stack
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="space-between"
-                  mt={1}
-                >
-                  <Stack direction="row" alignItems="center">
-                    <Typography variant="h6">${product.price}</Typography>
-                    <Typography
-                      color="textSecondary"
-                      ml={1}
-                      sx={{ textDecoration: "line-through" }}
-                    >
-                      ${product.salesPrice}
-                    </Typography>
-                  </Stack>
-                  <Rating
-                    name="read-only"
-                    size="small"
-                    value={product.rating}
-                    readOnly
-                  />
-                </Stack>
-              </CardContent>
-            </BlankCard>
+      <Box>
+        <Grid container spacing={3}>
+          <Grid item xs={12} lg={12}>
+          <h1>Accommodation</h1>
+            <Accommodation />
           </Grid>
-        ))}
-      </Grid>
-    );
-  };
+        
+          <Grid item xs={12} lg={12}>
+          <h1>Box Office</h1>
+            <BoxOffice />
+          </Grid>
+          <Grid item xs={12} lg={12}>
+          <h1>Car Rent</h1>
+            <Car />
+          </Grid>
+          <Grid item xs={12}>
+          <h1>Excursions</h1>
+            <Excursion />
+          </Grid>
+          <Grid item xs={12}>
+          <h1>Transfers</h1>
+            <Traslados />
+          </Grid>
+        </Grid>
+      </Box>
+    )      
+    };
    
   
   export default Product;
