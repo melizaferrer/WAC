@@ -1,7 +1,9 @@
 
 
+import { IconActivity, IconMountain } from "@tabler/icons-react";
+import { Icon24Hours, Icon3dCubeSphere, IconArrowsTransferDown, IconArrowsTransferUp, IconBox, IconCar, IconHotelService, IconTicket, IconTransferIn, IconTransferOut } from "@tabler/icons-react";
 import { IconChevronDown, IconLayoutDashboard, IconReservedLine, } from "@tabler/icons-react";
-import { uniqueId } from "lodash";
+// import { uniqueId } from "lodash";
 
 const Menuitems = [
   {
@@ -35,37 +37,42 @@ const Menuitems = [
         ],
       },
     ],
-  }, */ 
+  }, */
   {
     id: 'products',
     title: 'products',
-    type: 'group',
+    icon: IconReservedLine,
     href: "/products",
-    children: [
-      {
-        id: 'accommodation',
-        title: 'accommodation',
-        type: 'collapse',
-        icon: IconChevronDown,
-        href: "/products/accommodation",
-        children: [
-          {
-            id: 'boxOffice',
-            title: 'boxOffice',
-            type: 'item',
-            url: '/products/boxOffice',
-            target: true
-          },
-          {
-            id: 'carRent',
-            title: 'carRent',
-            type: 'item',
-            url: '/products/carRent',
-            target: true
-          }
-        ]
-      }
-    ]
+  },
+  {
+    id: 'accommodation',
+    title: 'accommodation',
+    icon: IconHotelService,
+    href: "/products/accommodation",
+  },
+  {
+    id: 'boxOffice',
+    title: 'Box Office',
+    icon: IconTicket,
+    href: "/products/boxOffice",
+  },
+  {
+    id: 'carRent',
+    title: 'Car Rent',
+    icon: IconCar,
+    href: "/products/carRent",
+  },
+  {
+    id: 'excursions',
+    title: 'Excursions',
+    icon: IconMountain,
+    href: "/products/excursions",
+  },
+  {
+    id: 'transfers',
+    title: 'Transfers',
+    icon: IconArrowsTransferDown,
+    href: "/products/transfers",
   },
   {
     navlabel: true,
