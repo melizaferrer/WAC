@@ -78,9 +78,9 @@ const Profile = () => {
         {/* <MenuItem>
           <ListItemIcon>
             <IconListCheck width={20} />
-          </ListItemIcon> */}
-          {/* <ListItemText>My Tasks</ListItemText> */}
-        {/* </MenuItem> */}
+          </ListItemIcon>
+           <ListItemText>My Tasks</ListItemText>
+        </MenuItem> */}
         <Box mt={1} py={1} px={2}>
           <Button
             href="/authentication/login"
