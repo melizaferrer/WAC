@@ -39,7 +39,7 @@ const Header = ({toggleMobileSidebar}: ItemType) => {
           onClick={toggleMobileSidebar}
           sx={{
             display: {
-              lg: "none",
+              lg: "inline",
               xs: "inline",
             },
           }}
